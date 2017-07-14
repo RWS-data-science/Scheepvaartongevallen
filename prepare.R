@@ -1,13 +1,10 @@
-library(rgdal)
-library(maptools)
-
 ogrListLayers("WVL_Scheepvaartongevallen.gdb")
 sch_niet_sig<- readOGR("WVL_Scheepvaartongevallen.gdb",layer="Scheepsvoorvallen_niet_significant")
 sch_sig<- readOGR("WVL_Scheepvaartongevallen.gdb",layer="Scheepsvoorvallen_significant")
 
-sluizen<- readShapePoints("WVL_Scheepvaartongevallen.gdb",)
-sluizen<- readOGR("WVL_Scheepvaartongevallen.gdb",layer="Sluizen")
-bruggen<- readOGR("WVL_Scheepvaartongevallen.gdb",layer="Bruggen")
+# sluizen<- readShapePoints("WVL_Scheepvaartongevallen.gdb",)
+# sluizen<- readOGR("WVL_Scheepvaartongevallen.gdb",layer="Sluizen")
+# bruggen<- readOGR("WVL_Scheepvaartongevallen.gdb",layer="Bruggen")
 
 ##to wgs
 rd<- "+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.999908 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +towgs84=565.2369,50.0087,465.658,-0.406857330322398,0.350732676542563,-1.8703473836068,4.0812 +no_defs"
